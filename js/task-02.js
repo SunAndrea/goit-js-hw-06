@@ -13,10 +13,11 @@ const ingredients = [
 // Додасть елементу клас item.
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 const ulEl = document.querySelector(`#ingredients`);
-
+const liArray = [];
 const liItems = ingredients.forEach((ingredient) => {
   const liItem = document.createElement(`li`);
   liItem.textContent = ingredient;
   liItem.classList.add(`item`);
-  ulEl.append(liItem);
+  liArray.push(liItem);
+  ulEl.append(...liArray);
 });
