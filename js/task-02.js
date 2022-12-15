@@ -19,5 +19,5 @@ const liItems = ingredients.forEach((ingredient) => {
   liItem.textContent = ingredient;
   liItem.classList.add(`item`);
   liArray.push(liItem);
-  ulEl.append(...liArray);
 });
+ulEl.append(...liArray);
