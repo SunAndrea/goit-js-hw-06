@@ -6,10 +6,8 @@ const liArray = Array.from(numberOfCategories);
 console.log(liArray);
 const liInfo = liArray
   .map((element) => {
-    // console.log(element.children[1].children);
-
     return `Category: ${element.children[0].textContent} Elements: ${element.children[1].children.length}`;
   })
-  .join(`               `);
+  .join(`\n`);
 
 console.log(liInfo);

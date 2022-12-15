@@ -21,4 +21,3 @@ const liItems = ingredients.forEach((ingredient) => {
   liItem.classList.add(`item`);
   ulEl.append(liItem);
 });
-// console.log(liItems);

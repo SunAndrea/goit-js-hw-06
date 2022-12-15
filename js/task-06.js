@@ -9,11 +9,8 @@
 //  у вихідні файли завдання.
 
 const inputEl = document.querySelector(`#validation-input`);
-const dataLengthAtr = Number(inputEl.getAttribute(`data-length`));
-console.log(dataLengthAtr);
-// console.log(inputEl);
 const onInputElBlur = ({ target }) => {
-  if (Number(target.value.length) === dataLengthAtr) {
+  if (Number(target.value.length) == Number(inputEl.dataset.length)) {
     inputEl.classList.remove(`invalid`);
     inputEl.classList.add(`valid`);
   } else {
@@ -21,6 +18,4 @@ const onInputElBlur = ({ target }) => {
     inputEl.classList.remove(`valid`);
   }
 };
-
 inputEl.addEventListener(`blur`, onInputElBlur);
-// `[data - length]`;

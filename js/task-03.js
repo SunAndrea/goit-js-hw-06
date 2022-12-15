@@ -21,18 +21,17 @@ const images = [
 // Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
 // Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
 
-const ulEl = document.querySelector(`.gallery`);
-const createGalleryItems = images.map((image) => {
-  const liEl = document.createElement(`li`);
-  const imgEl = document.createElement(`img`);
-  ulEl.style.display = `flex`;
-  ulEl.style.listStyle = `none`;
-  imgEl.src = image.url;
-  imgEl.alt = image.alt;
-  imgEl.style.width = `400px`;
-  imgEl.style.height = `300px`;
-  liEl.append(imgEl);
-  console.log(liEl);
-  ulEl.insertAdjacentHTML("afterbegin", liEl.outerHTML);
-  console.log(liEl.outerHTML);
-});
+const ulEl = document.querySelector(".gallery");
+
+const imgEl = images
+  .map(
+    ({ url, alt }) =>
+      `<li><img src = ${url}; alt = ${alt}; width = 300; height = 200;></li>`
+  )
+  .join("");
+
+ulEl.insertAdjacentHTML("afterbegin", imgEl);
+ulEl.setAttribute(
+  "style",
+  "display:flex; justify-content: space-between; list-style: none;"
+);
