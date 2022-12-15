@@ -10,7 +10,7 @@
 
 const inputEl = document.querySelector(`#validation-input`);
 const onInputElBlur = ({ target }) => {
-  if (Number(target.value.length) == Number(inputEl.dataset.length)) {
+  if (Number(target.value.length) === Number(inputEl.dataset.length)) {
     inputEl.classList.remove(`invalid`);
     inputEl.classList.add(`valid`);
   } else {
