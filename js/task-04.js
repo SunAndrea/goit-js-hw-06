@@ -9,7 +9,7 @@
 const minusBtn = document.querySelector("[data-action=decrement]");
 const valueEl = document.querySelector(`#value`);
 const plusBtn = document.querySelector(`[data-action=increment]`);
-
+console.log(minusBtn);
 let counterValue = 0;
 
 minusBtn.addEventListener(`click`, () => {
